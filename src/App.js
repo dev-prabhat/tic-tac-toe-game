@@ -77,7 +77,11 @@ const App = () => {
     ) {
       setWinMessage(`${itemArray[2]} won`);
     }
+    else if (((itemArray[0] === "cross") || (itemArray[0] === "circle")) && ((itemArray[1] === "cross") || (itemArray[1] === "circle")) && ((itemArray[2] === "cross") || (itemArray[2] === "circle")) && ((itemArray[3] === "cross") || (itemArray[3] === "circle")) && ((itemArray[4] === "cross") || (itemArray[4] === "circle")) && ((itemArray[5] === "cross") || (itemArray[5] === "circle")) && ((itemArray[6] === "cross") || (itemArray[6] === "circle")) && ((itemArray[7] === "cross") || (itemArray[7] === "circle")) && ((itemArray[8] === "cross") || (itemArray[8] === "circle"))) {
+      setWinMessage("No One Wons")
+    }
   };
+
 
   const changeItem = (itemNumber) => {
     if (winMessage) {
@@ -112,7 +116,7 @@ const App = () => {
               </div>
             ) : (
               <h1 className="text-center text-success">
-                {isCross ? "Cross" : "Circle"}
+                {isCross ? "Cross turns" : "Circle turns"}
               </h1>
             )
           }
